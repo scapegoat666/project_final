@@ -25,7 +25,7 @@
     </div>
 
     <ul class="nav navbar-nav navbar-right">
-    <li id="nav-logout-btn"><a href="user.html"><span class="username"></span> </a></li>
+    <li id="nav-logout-btn"><a href="#"><span class="username"></span> </a></li>
  <li id="nav-logout-btn"><a href="Signin.html"  onclick="deleteCookie()"><span></span>Logout</a></li>
                
                         
@@ -91,7 +91,7 @@
           $('.account').attr('href', "edituser.html?id=" + inf.Id);
           $(".my-profile").attr('href', "my-profile.html?id=" + inf.Id);
           $('.username').html(inf.UserName);
-          $(".view").attr('href', "viewuser.html?id=" + inf.Id);
+          $(".view").attr('href', "Viewinfo.html?id=" + inf.Id);
           $(".edit").attr('href', "edituser.html?id=" + inf.Id);
           $(".dashboard").attr('href', "home.html?id=" + inf.Id);
         });
