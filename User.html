@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="shortcut icon" href="image/ico/16weed.png">
+  <title>user</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tag.css">
+</head>
+
+</head>
+
+<body>
+<nav class="navbar navbar-default w3l aits wow bounceInUp agileits w3layouts">
+   <div class="container">
+    <div class="navbar-header">
+
+     <a href="#"><img src="image/72weed.png" style="height: 52px; width: 52px;"></a>
+    </div>
+
+    <ul class="nav navbar-nav navbar-right">
+    <li id="nav-logout-btn"><a href="user.html"><span class="username"></span> </a></li>
+ <li id="nav-logout-btn"><a href="Signin.html"  onclick="deleteCookie()"><span></span>Logout</a></li>
+               
+                        
+                    </ul>
+      
+      
+     
+   
+  </div>
+</nav>
+<br><br>
+  <div class="container">
+    <legend><h1><center>&nbsp;Welcome to weed garden<br></center></h1></legend><br>
+    <div class="row">
+      
+      <div class="col-md-6">
+        <div class="thumbnail">
+            <img src="image/view.png" alt="Nature" style="width:60%">
+            <div class="caption">
+              <center><a href="#" class="view btn btn-success btn-block">View & Update Information</a></center>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="thumbnail">
+            <img src="image/edit.png" alt="Fjords" style="width:60%">
+            <div class="caption">
+              <center><a href="#" class="edit btn btn-success btn-block">Edit Account</a></center>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/cache.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/user.js"></script>
+  <script type="text/javascript" src="js/jquery.cookie.js"></script>
+  <script type="text/javascript">
+    console.log($.cookie('keep'));
+
+    function deleteCookie() {
+      $.removeCookie('keep');
+      console.log($.removeCookie('keep'));
+    }
+
+    $(document).ready(function() {
+
+      $.urlParam = function(name) {
+        var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        return results[1] || 0;
+      }
+      $(function() {
+        var id = $.urlParam('id');
+        var url = "http://membershipwebapi977290.azurewebsites.net/api/Members/" + id;
+        console.log(url);
+        $.get(url, function(inf, status) {
+          console.log(inf);
+          $('.account').attr('href', "edituser.html?id=" + inf.Id);
+          $(".my-profile").attr('href', "my-profile.html?id=" + inf.Id);
+          $('.username').html(inf.UserName);
+          $(".view").attr('href', "viewuser.html?id=" + inf.Id);
+          $(".edit").attr('href', "edituser.html?id=" + inf.Id);
+          $(".dashboard").attr('href', "home.html?id=" + inf.Id);
+        });
+      });
+
+    });
+  </script>
+</body>
+
+</html>

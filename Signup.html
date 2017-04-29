@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" href="image/ico/16weed.png">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="css/signupform.css">
+
+</head>
+<body id="page-top">
+
+<nav class="navbar navbar-default w3l aits wow bounceInUp agileits w3layouts">
+             <div class="container">
+                
+<a href="index.html"><img src="image/72weed.png" style="height: 52px; width: 52px;"></a>
+<div id="navbar" class="navbar-collapse agileits w3layouts navbar-right collapse">
+
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li class="active"><a href="Signin.html">Login</a></li>
+                        
+                    </ul>
+                </div>
+                </div>
+                
+
+              
+            
+        </nav>
+
+  <div id="app">
+    <div class="container">
+
+      <div class="wrapper">
+       <!-- <div id="err" style="display:none" class="alert alert-danger alert-dismissable fade in">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">x</a>
+          <strong>Incorrect!!! : </strong>
+          <span style="color:blue;font-weight:bold" id="summary">
+      Your form contains tons of errors! Please try again.</span>
+        </div> -->
+        <div id="suc" style="display:none" class="alert alert-success alert-dismissable fade in">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">x</a>
+          <strong>Regist Successful!!!</strong>
+        </div>
+<div class="container">
+<form class="well form-horizontal" action="" method="POST" role="form" id="signupForm">
+
+<fieldset>
+
+<!-- Form Name -->
+<legend>Register</legend>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="username">Username</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+   <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" maxlength="12" autofocus>
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label"  for="password" >Password</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+  <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" maxlength="12">
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="con_password" >Confirm Password</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+  <input type="password" class="form-control" id="con_password" name="con_password" placeholder="Confirm your password" maxlength="12">
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="fname">First Name</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter your First Name">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="lname">Last Name</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter your Last Name">
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label" for="email">E-Mail</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input type="email" class="form-control" id="email" name="email" placeholder="Enter your E-mail Address">
+    </div>
+  </div>
+</div>
+
+
+<!-- Text input-->
+       
+<div class="form-group">
+  <label class="col-md-4 control-label" for="tel">Phone</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input type="text" class="form-control" id="tel" name="tel" maxlength="10" placeholder="Enter your Telephone number">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+      
+
+
+<!-- Text input-->
+
+
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-1">
+   <button type="submit" class="btn btn-success btn-block" id="signup" name="button">Register</button>
+  </div>
+  
+</div>
+
+
+</div>
+    </div>
+    
+  </div>
+  </fieldset>
+  </form>
+  </body>
+<div class="footer agileits w3layouts">
+       
+            <p >
+            <div class="container text-center">
+                &copy; 977-290 Css workshop by Ittipat</p>
+            </div>
+            <div class="clearfix"></div>
+
+</div>
+ <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/cache.js"></script>
+  <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="js/singup.js"></script>
+</body>
+
+ 
+
+</html>
+
